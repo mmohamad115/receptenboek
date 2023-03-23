@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Times New Roman, serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 nav {
@@ -28,7 +28,7 @@ nav .logo {
 nav ul {
     list-style: none;
     margin: 0;
-    padding-left: 20%;
+    padding-left: 30%;
     display: flex;
 
 }
@@ -63,4 +63,30 @@ nav ul li a:hover {
     top: 35%;
     left: 10%;
     color: #793c3c;
+}
+.box{
+    position: absolute;
+    top: 70%;
+    right: 35%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #984b4b;
+    width: 500px;
+    height: 50px;
+    padding: 0px 25px;
+    border-radius: 9px;
+}
+input{
+    width: 240px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: white;
+}
+.fa-magnifying-glas{
+    color: skyblue;
+    cursor: pointer;
 }

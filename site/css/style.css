@@ -90,3 +90,8 @@ input{
     color: skyblue;
     cursor: pointer;
 }
+.zoek{
+    position: absolute;
+    top: 63%;
+    right: 49%;
+}

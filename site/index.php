@@ -35,5 +35,11 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     ?>
     <?php include "main.html";
     ?>
+    <?php foreach ($recepten as $recept):?>
+    <div class="tomato">
+        <a href="#"></a><img class="images" src="images/<?php echo $recept ["afbeelding"]?>">
+        <p><?php echo $recept ["naam"]?></p>
+    </div>
+    <? endforeach ?>
 </body>
 </html>

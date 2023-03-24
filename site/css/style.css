@@ -58,15 +58,17 @@ nav ul li a:hover {
     background-position: center;
     box-shadow: 2px 6px 11px 2px #bebebe;
 }
-.title{
+
+.title {
     position: absolute;
     top: 35%;
     left: 10%;
     color: #793c3c;
 }
-.box{
+
+.box {
     position: absolute;
-    top: 70%;
+    top: 71%;
     right: 35%;
     height: 100vh;
     display: flex;
@@ -78,7 +80,8 @@ nav ul li a:hover {
     padding: 0px 25px;
     border-radius: 9px;
 }
-input{
+
+input {
     width: 240px;
     border: none;
     outline: none;
@@ -86,12 +89,45 @@ input{
     font-size: 18px;
     color: white;
 }
-.fa-magnifying-glas{
+
+.fa-magnifying-glas {
     color: skyblue;
     cursor: pointer;
 }
-.zoek{
+
+.zoek {
     position: absolute;
     top: 63%;
     right: 49%;
+}
+
+.images {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    overflow-x: hidden;
+    padding: 0px 0px 50px 0px;
+    margin: 40px 40px 20px 30px;
+    border-radius: 25px;
+    box-shadow: 1px 2px 6px 2px #949494;
+    transition: 0.4s;
+}
+
+.images:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 3px 6px 3px #7f7f7f;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.image{
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    
+}
+.recepten{
+    margin: 70px 0px 0px 30px;
+}
+.tomato p{
+    position: absolute;
+    margin: 0;
 }

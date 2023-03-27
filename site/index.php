@@ -2,7 +2,7 @@
 require 'database.php';
 
 //de sql query
-$sql = "SELECT * FROM recepten";
+$sql = "SELECT * FROM recept";
 
 //hier wordt de query uitgevoerd met de database
 $result = mysqli_query($conn,$sql);
@@ -14,7 +14,7 @@ $result = mysqli_query($conn,$sql);
  * voor bijvoorbeeld producten $all_products heten.
  * Maar dit kies je zelf
  */
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
 
@@ -35,7 +35,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     ?>
     <?php include "main.html";
     ?>
-    <?php foreach ($recepten as $recept):?>
+    <?php foreach ($recept as $recept):?>
     <div class="tomato">
         <a href="#"></a><img class="images" src="images/<?php echo $recept ["afbeelding"]?>">
         <p><?php echo $recept ["naam"]?></p>

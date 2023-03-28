@@ -28,7 +28,7 @@ $recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&display=swap" rel="stylesheet">
-    <title>Mijn Restaurant</title>
+    <title>Recepten</title>
 </head>
 <body>
     <?php include "header.html"; 
@@ -37,7 +37,7 @@ $recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
     ?>
     <?php foreach ($recept as $recept):?>
     <div class="tomato">
-        <a href="#"></a><img class="images" src="images/<?php echo $recept ["afbeelding"]?>">
+        <a href="database.php"><img class="images" src="images/<?php echo $recept ["afbeelding"]?>"></a>
         <p><?php echo $recept ["naam"]?></p>
     </div>
     <? endforeach ?>

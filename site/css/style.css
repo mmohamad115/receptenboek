@@ -74,11 +74,11 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #984b4b;
+    background-color: #d66161;
     width: 500px;
     height: 50px;
     padding: 0px 25px;
-    border-radius: 9px;
+    border-radius: 100px;
 }
 
 input {
@@ -104,10 +104,10 @@ input {
 .images {
     width: 400px;
     height: 200px;
-    display: flex;
+    flex-direction: row;
     overflow-x: hidden;
     padding: 0px 0px 50px 0px;
-    margin: 40px 40px 20px 30px;
+    margin: 20px 40px 20px 30px;
     border-radius: 25px;
     box-shadow: 1px 2px 6px 2px #949494;
     transition: 0.4s;
@@ -119,15 +119,22 @@ input {
     transition: 0.4s;
     cursor: pointer;
 }
-.image{
+
+.image {
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
+
+}
+
+.recepten {
+    margin: 70px 0px 30px 30px;
+}
+.tomato{
+    display: inline-block;
     
 }
-.recepten{
-    margin: 70px 0px 0px 30px;
-}
-.tomato p{
-    position: absolute;
-    margin: 0;
+.tomato p {
+    /* position: absolute; */
+    margin-left: 12%;
+    top: auto;
 }

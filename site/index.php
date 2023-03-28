@@ -37,8 +37,8 @@ $recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
     ?>
     <?php foreach ($recept as $recept):?>
     <div class="tomato">
-        <a href="database.php"><img class="images" src="images/<?php echo $recept ["afbeelding"]?>"></a>
-        <p><?php echo $recept ["naam"]?></p>
+        <a href="database.php"><img class="images" src="images/<?php echo $recept ["foto"]?>"></a>
+        <p><?php echo $recept ["titel"]?></p>
     </div>
     <? endforeach ?>
 </body>

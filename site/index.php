@@ -31,7 +31,7 @@ $recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <title>Recepten</title>
 </head>
 <body>
-    <?php include "header.html"; 
+    <?php include "nav.html"; 
     ?>
     <?php include "main.html";
     ?>
@@ -41,5 +41,7 @@ $recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <p><?php echo $recept ["titel"]?></p>
     </div>
     <? endforeach ?>
+    <?php include "footer.html";
+    ?>
 </body>
 </html>

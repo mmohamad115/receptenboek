@@ -1,5 +1,25 @@
+<?php
+require 'database.php';
+
+//de sql query
+$sql = "SELECT * FROM recept";
+
+//hier wordt de query uitgevoerd met de database
+$result = mysqli_query($conn, $sql);
+
+/**
+ * Hier wordt het resultaat ($result) omgezet
+ * in een *multidimensionale associatieve array
+ * in dit voorbeeld staat $all_users maar dit mag
+ * voor bijvoorbeeld producten $all_products heten.
+ * Maar dit kies je zelf
+ */
+$recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <title>main</title>
 </head>
+
 <body>
     <main>
         <div>
@@ -19,47 +40,13 @@
             </div>
         </div>
         <h1 class="recepten">Onze recepten:</h1>
-        <div class="gallery">
-            <ul class="controls">
-                <li class="buttons active" data-filter="all">All</li>
-                <li class="buttons" data-filter="langeste">Langeste</li>
-                <li class="buttons" data-filter="makkelijkste">Makkelijkste</li>
-                <li class="buttons" data-filter="meeste">Meeste</li>
-            </ul>
-        </div>
-        <div class="image-container">
-            <?php foreach ($recept as $recept):?>
+        <?php foreach ($recept as $recept) : ?>
             <div class="tomato">
-                <a href="database.php"><img class="images" src="images/<?php echo $recept ["foto"]?>"></a>
-                <p><?php echo $recept ["titel"]?></p>
+                <a href="recept.php?id=<?php echo $recept["id"] ?>"><img class="images" src="images/<?php echo $recept["foto"] ?>"></a>
+                <p><?php echo $recept["titel"] ?></p>
             </div>
         <? endforeach ?>
-        </div>
     </main>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-<script>
-$(document).ready(function(){
-
-    $('.buttons').click(function(){
-
-        $(this).addClass('active').siblings().removeClass('active');
-
-        var filter = $(this).attr('data-filter')
-
-        if(filter == 'all'){
-            $('.images').show(400);
-        }else{
-            $('.images').not('.'+filter).hide(200)
-            $('.images').filter('.'+filter).show(400)
-        }
-
-
-    });
-});
-</script>
 </body>
+
 </html>

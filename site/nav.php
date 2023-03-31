@@ -13,7 +13,7 @@
     <nav>
         <div class="logo">Griekse Receptenboek</div>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="">Over ons</a></li>
             <li><a href="">Recepten</a></li>
             <li><a href="">Producten</a></li>

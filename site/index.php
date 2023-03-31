@@ -31,17 +31,11 @@ $recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <title>Recepten</title>
 </head>
 <body>
-    <?php include "nav.html"; 
+    <?php include "nav.php"; 
     ?>
-    <?php include "main.html";
+    <?php include "main.php";
     ?>
-    <?php foreach ($recept as $recept):?>
-    <div class="tomato">
-        <a href="database.php"><img class="images" src="images/<?php echo $recept ["foto"]?>"></a>
-        <p><?php echo $recept ["titel"]?></p>
-    </div>
-    <? endforeach ?>
-    <?php include "footer.html";
+    <?php include "footer.php";
     ?>
 </body>
 </html>
